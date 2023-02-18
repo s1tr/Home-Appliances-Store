@@ -1,0 +1,579 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 3, 2023, 3:44:37 PM
+    Author     : awdal
+*/
+
+
+/*css reset*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul,
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --color1: #4e4e4e;
+    --color2: #ff7300;
+}
+
+/*make the nav bar stichy*/
+nav {
+    position: sticky;
+    top: 0px;
+}
+
+.nav-bar {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color1);
+}
+
+.nav-home {
+    margin-left: 20px;
+}
+
+.nav-home a {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.orangeletter {
+    color: var(--color2) !important;
+}
+
+.nav-links {
+    width: 30%;
+}
+
+.nav-links ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.links {
+    color: rgb(255, 255, 255);
+    font-size: 0.9vw;
+    transition: all, 0.5s;
+}
+
+.link1,.link2,.link3,.link4 {
+    color: var(--color2);
+}
+
+.links:hover {
+    text-shadow: 0px 3px 7px var(--color2);
+    font-size: 0.94vw;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.index-absolute{
+    bottom: -669px;
+}
+
+.footer {
+    height: 4vw;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color1);
+    align-items: center;
+}
+
+.footer * {
+    color: var(--color2);
+    padding: 0 20px 0 3px;
+    font-size: 1vw;
+}
+
+/*if the screen width is less than 1400px*/
+@media screen and (max-width:1400px) {
+    .links {
+        font-size: 20px;
+    }
+
+    .nav-bar {
+        height: 20%;
+    }
+
+    .nav-links ul {
+        gap: 10px;
+    }
+
+    .links:hover {
+        font-size: 22px
+    }
+}
+
+/* about us section */
+
+.aboutus-bg {
+    margin: 50px 0 0 0;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/about_us_image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 75%;
+}
+
+.aboutus {
+    max-height: 500px;
+    margin: 0 30px 0 30px;
+    text-align: center;
+    line-height: 20px;
+    border-width: 2px;
+    border-color: black;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    background-color: rgba(255, 255, 255, 0.664);
+}
+
+.aboutus h1 {
+    padding: 40px 0 20px 0;
+    font-size: 1.9vw;
+}
+
+.aboutus p {
+    padding: 0 0 40px 0;
+    font-size: 1.3vw;
+    line-height: 35px;
+}
+
+.services-container {
+    height: 30%;
+    margin: 90px 0 90px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.services-container>p {
+    font-size: 1.7vw;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.services {
+    width: 70%;
+    height: 100%;
+    margin-top: 50px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.service {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.home-icons {
+    width: 20%;
+    padding-bottom: 40px;
+}
+
+.service-description {
+    padding: 0 40px 0 10px;
+    font-size: 1vw;
+    text-align: center;
+}
+
+.service:hover {
+    box-shadow: 6px 6px 20px var(--color2);
+    background-color: rgba(240, 240, 240, 0.247);
+}
+
+.offer {
+    width: auto;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20%;
+}
+
+.offer1 {
+    width: 40%;
+    height: 20vw;
+    margin-right: 100px;
+    background-image: url(../images/offer1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.offer1 div,
+.offer2 div {
+    width: 70%;
+    background-color: #64646477;
+}
+
+.offer1 div *,
+.offer2 div * {
+    font-size: 1.3vw;
+    line-height: 1.5vw;
+    color: white
+}
+
+.offer2 {
+    width: 30%;
+    height: 20vw;
+    margin-right: 100px;
+    background-image: url(../images/offer2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.offer1:hover,
+.offer2:hover {
+    box-shadow: 2px 8px 9px var(--color1);
+}
+
+
+
+
+
+
+
+
+
+
+/* add new appliance page !!!!!!!!! */
+
+
+
+
+
+
+.page-layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-header {
+    background-color: var(--color1);
+    width: 25%;
+    height: 5%;
+    padding-top: 19px;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    color: var(--color2);
+    font-size: 1.5vw;
+    margin-top: 250px;
+}
+
+.discount{
+    background-image: url(../images/icons/Discount.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30vw;
+    height: 20vw;
+    margin-top: 100px;
+    
+
+}
+
+.form-layout {
+    width: 40%;
+    min-height: 700px;
+    background-color: var(--color1);
+    display: flex;
+    align-items: center;
+}
+
+.form-layout form {
+    width: 50%;
+}
+
+.error {
+    color: red;
+    font-size: medium;
+}
+
+.f-container {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 20px 40px;
+}
+
+.lbl {
+    color: var(--color2);
+    margin-bottom: 10px;
+    border-top: 1px solid white;
+    padding-top: 5px;
+    font-size: 0.8vw;
+}
+
+.lblr{
+    color: var(--color2);
+    margin-bottom: 10px;
+    padding-top: 5px;
+    font-size: 0.8vw;
+}
+
+
+#submitbtn {
+    background-color: white;
+    color: black;
+    width: 50%;
+    min-height: 30px;
+    margin-left: 25%;
+    transition: all 0.5s;
+    border-style: none;
+    border-radius: 4px;
+    font-size: 0.7vw;
+}
+
+#submitbtn:hover {
+    background-color: var(--color2);
+    color: white;
+
+}
+
+.form-layout input{
+    text-align: center;
+}
+
+
+.form-layout input{
+    text-align: center;
+}
+
+@media screen and (max-width:1300px) {
+    .form-layout{
+        min-width: 800px;
+    }
+    .form-header{
+        min-width: 400px;
+        font-size: 30px;
+    }
+    .lbl,.lblr{
+        font-size: 20px;
+    }
+    .discount{
+        width: 0px;
+        height: 0px;
+    }
+    .form-layout form{
+        width: 90%;
+    }
+
+}
+
+
+
+/*this css for servlet response of adding new appliance*/
+
+.add-container{
+    width: 100%;
+    height: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.currect-sign{
+    width: 25%;
+    height: 40%;
+    background-image: url(../images/checkmark.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.error-sign{
+    width: 15%;
+    height: 40%;
+    background-image: url(../images/xmark.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.currect-container,.error-container{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.error-container a{
+    font-size: 2rem;
+    color: blue;
+}
+
+.correct{
+    color: #ff7300;
+    font-size: 50px;
+}
+
+
+/*this css code for browse Appliance record!*/
+
+
+
+.table-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 0 100px 0;
+}
+
+.no-data{
+    margin-top: 100px;
+    font-size: 4vw;
+}
+
+.table{
+    width: 90%;
+    background-color: var(--color1);
+    margin-bottom: 50px;
+}
+
+.table-container a {
+    margin-top: 30px;
+    font-size: 1vw;
+}
+
+.table-container h1{
+    font-size: 2vw;
+    color: var(--color1);
+    text-shadow:5px 5px 5px var(--color2);
+}
+
+.table th{
+    font-size: 1vw;
+    color: white;
+}
+
+.table td{
+    border-width: 0px 0px 1px 0px;
+    border-color: white;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    color: var(--color2);
+    font-size: 0.8vw;
+}
+
+
+/*this css code for error page*/
+
+.error-page{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.error-msg{
+    font-size: 1.5vw;
+    color:var(--color2);
+}
+.error-msg h1:nth-child(2){
+    padding-top: 10px;
+}
+
+
+
+/*this code is for login page and register page and feedback page*/
+
+
+.login-container,.register-container{
+    height: 20%;
+}
+
+.email-space,.password-space{
+    padding-bottom: 70px;
+}
+
+.feedback-image{
+    background-image: url(../images/icons/feedback.svg);
+}
+
+.login-image{
+    background-image: url(../images/icons/login.svg);
+}
+
+.register-image{
+    background-image: url(../images/icons/register.svg);
+}
+
+.login-image,.register-image,.feedback-image{
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20vw;
+    height: 20vw;
+    margin-top: 100px;
+}
+
+.error-reg{
+    font-size: 2vw;
+    color: var(--color2);
+}
+
+
+
+@media screen and (max-width:1300px) {
+    .login-image,.register-image,.feedback-image{
+        width: 0px;
+        height: 0px;
+    }
+}
+
+

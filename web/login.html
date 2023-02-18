@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/svg" href="images/web-icon.svg">
+</head>
+
+<body>
+    
+    <nav>
+        <div class="nav-bar">
+            <div class="nav-home">
+                <a href="index.jsp"><span class="orangeletter">Y</span>our <span class="orangeletter">H</span>ome<span
+                        class="orangeletter"> :)</span></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.jsp" class="links">Home</a></li>
+                    <li><a href="login.html" class="links link2">Login</a></li>
+                    <li><a href="register.html" class="links">Register</a></li>
+                    <li><a href="addfeedback.jsp" class="links">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-layout">
+        <h1 class="form-header">Login</h1>
+        <div class="form-layout login-container">
+
+            <form action="login" method="post" onsubmit="return validatelogin()">
+                
+                <div class="f-container email-space">
+                    <label for="email" class="lbl">Email :<span id="err-email" class="error"></span></label>
+                    <input type="text" name="username" id="email">
+                </div>
+
+                <div class="f-container password-space">
+                    <label for="password" class="lbl">Password :<span id="err-pass"
+                            class="error"></span></label>
+                            <input type="password" name="password" id="password" >
+                </div>
+
+
+                <div class="f-container">
+                    <input type="submit" name="submit" id="submitbtn" value="Login">
+                </div>
+            </form>
+            <div class="login-image"></div>
+        </div>
+
+    </main>
+    <footer>
+            <div class="footer">
+                <p>2023 &copy; YourHome. All Rights Reserved</p>
+                <p>address : 8WJW+89 Mecca</p>
+                <p>contact us : 0512345678</p>
+            </div>
+    </footer>
+
+</body>
+
+<script src="js/site.js"></script>
+
+</html>
